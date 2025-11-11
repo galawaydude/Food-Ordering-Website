@@ -86,7 +86,7 @@ TOMATO - Food Delivery Website/
    cd backend
    npm run server
    ```
-   The backend will run on `http://localhost:4000`
+   The backend will run on `https://food-ordering-website-451383526382.europe-west1.run.app/`
 
 2. **Start the Frontend (Customer App)**
    ```bash

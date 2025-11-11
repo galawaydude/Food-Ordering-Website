@@ -14,4 +14,4 @@ export const assets ={
     parcel_icon
 }
 
-export const url = 'http://localhost:4000'
+export const url = 'https://food-ordering-website-451383526382.europe-west1.run.app/'
