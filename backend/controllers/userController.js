@@ -29,7 +29,7 @@ const loginUser = async (req,res) => {
 }
 
     const createToken = (id) => {
-        return jwt.sign({id},process.env.JWT_SECRET)
+        return jwt.sign({id},"your-secret-string-goes-here-123!")
     }
 
 // register user
