@@ -10,7 +10,7 @@ const razorpay = new Razorpay({
 // Placing User Order for Frontend
 // Backend code
 const placeOrder = async (req, res) => {
-    const frontend_url = "http://localhost:5173"; // Ensure this URL is used for redirection
+    const frontend_url = "http://localhost:5173https://food-ordering-website-frontend-451383526382.asia-south1.run.app/"; // Ensure this URL is used for redirection
     try {
         const newOrder = new orderModel({
             userId: req.body.userId,
