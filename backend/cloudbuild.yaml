@@ -1,8 +1,0 @@
-# This file tells Cloud Build what to do when you push to GitHub
-steps:
-  # This one command deploys your app using the app.yaml file
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['app', 'deploy', 'app.yaml']
-
-# Give the deployment extra time
-timeout: '1600s'
