@@ -1,20 +1,22 @@
-# Use Node.js LTS
-FROM node:18-slim
+# 1. Use an official Node.js 20 image
+FROM node:20-slim
 
-# Set working directory
-WORKDIR /usr/src/app
+# 2. Set the working directory inside the container
+WORKDIR /app
 
-# Copy dependency definitions
+# 3. Copy package.json and package-lock.json (if you have it)
 COPY package*.json ./
 
-# Install dependencies (production only)
+# 4. Install production dependencies
 RUN npm ci --only=production
 
-# Copy app source
+# 5. Copy the rest of your application code
 COPY . .
 
-# Expose port
+# 6. Expose the port your app runs on
+# Cloud Run will automatically find this
 EXPOSE 4000
 
-# Start the app
-CMD ["node", "server.js"]
+# 7. Define the command to start your app
+# This runs the "start" script from your package.json
+CMD [ "npm", "start" ]
